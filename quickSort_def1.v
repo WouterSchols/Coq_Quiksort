@@ -242,8 +242,7 @@ intros.
 unfold quickSort.
 induction (create_qs_tree xs). (*induction on recursion tree*)
 intuition. (*base*)
-unfold In in H. (*step*)
-simpl.
+simpl.  (*step*)
 destruct H. (*split x = x0 or x in xs*)
 rewrite <- H. (*case x = x0*)
 simpl.
